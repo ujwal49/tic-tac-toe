@@ -2,20 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="keywords" content="tic tac toe">
         <title>Tic Tac Toe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1 id="tic-tac-toe">Tic Tac Toe</h1>
+
         <div class="container">
-            <!-- <img id="circle" src="./images/circle_mark.svg" alt="circle">
-            <img id="cross" src="images/cross_mark.svg" alt="cross-mark">
-            <img id="lines" src="images/lines.svg" alt="grid"> -->
-            <div class="horizantal-line" id="line-1"></div>
-            <div class="horizantal-line" id="line-2"></div>
-            <div class="vertical-line" id="line-3"></div>
-            <div class="vertical-line" id="line-4"></div>
+            <div>
+                <h1 id="tic-tac-toe">Tic Tac Toe</h1>
+            </div>
+            
+            <div class="square">
+                <button id="btn-1" onclick="change(this.id)"></button>
+                <button id="btn-2" onclick="change(this.id)"></button>
+                <button id="btn-3" onclick="change(this.id)"></button>
+                <div class="horizantal-line line" id="line-1"></div>
+                <button id="btn-4" onclick="change(this.id)"></button>
+                <button id="btn-5" onclick="change(this.id)"></button>
+                <button id="btn-6" onclick="change(this.id)"></button>
+                <div class="horizantal-line line" id="line-2"></div>
+                <button id="btn-7" onclick="change(this.id)"></button>
+                <button id="btn-8" onclick="change(this.id)"></button>
+                <button id="btn-9" onclick="change(this.id)"></button>
+                <div class="vertical-line" id="line-3"></div>
+                <div class="vertical-line" id="line-4"></div>
+                <script src="index.js"></script>
+            </div>
+            
         </div>
-        <script src="index.js"></script>
+       
     </body>
 </html>
