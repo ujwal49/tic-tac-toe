@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap');
+
+
+body{
+    background-color: #FFAC70;
+}
+
+
+#tic-tac-toe{
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+.container{
+    width: 50vh;
+    height: 50vh;
+    background-color: #FFF0DD;
+    border-radius: 10vh;
+    position: relative;
+    left: 76vh;
+    top: 18vh;
+}
+
+/* img{
+    width: 8vh;
+    height: auto;
+} */
+
+.horizantal-line{
+    height: 0.2rem;
+    background: #000000;
+    width: 40vh;
+}
+
+#line-1{
+     position: relative;
+     top: 18vh;
+     left: 5vh;
+}
+
+#line-2{
+    position: relative;
+    top: 30vh;
+    left: 5vh;
+}
+
+.vertical-line{
+    height: 40vh;
+    width: 0.2rem;
+    background: #000000;
+}
+
+#line-3{
+    position: relative;
+    top: 4vh;
+    left: 18vh;
+}
+
+#line-4{
+    position: relative;
+    top: -36vh;
+    left: 31vh;
+}
