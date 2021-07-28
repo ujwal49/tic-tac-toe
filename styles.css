@@ -1,11 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap');
 
-
+*{
+    margin:0%;
+    padding: 0%;
+}
 body{
     background-color: #FFAC70;
+    margin-bottom: auto;
+    width:100%;
 }
 
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 #tic-tac-toe{
     font-family: 'Roboto',sans-serif;
@@ -14,36 +25,33 @@ body{
     top: 10vh;
 }
 
-.container{
+.square{
     width: 50vh;
     height: 50vh;
     background-color: #FFF0DD;
     border-radius: 10vh;
     position: relative;
-    left: 76vh;
+    align-content: center;
     top: 18vh;
+    justify-content: center;
 }
 
-/* img{
-    width: 8vh;
-    height: auto;
-} */
 
 .horizantal-line{
     height: 0.2rem;
     background: #000000;
+    position:relative;
     width: 40vh;
+    top:-10px;
 }
 
 #line-1{
-     position: relative;
-     top: 18vh;
+     top: 6vh;
      left: 5vh;
 }
 
 #line-2{
-    position: relative;
-    top: 30vh;
+    top: 8vh;
     left: 5vh;
 }
 
@@ -51,16 +59,76 @@ body{
     height: 40vh;
     width: 0.2rem;
     background: #000000;
+    position:relative;
 }
 
 #line-3{
-    position: relative;
-    top: 4vh;
-    left: 18vh;
+    top:-32vh;
+    left:18vh;
 }
 
 #line-4{
+    top:-72vh;
+    left:32vh;
+}
+
+button{
+    width: 12vh;
+    height:12vh;
+    border:none;
     position: relative;
-    top: -36vh;
-    left: 31vh;
+    cursor:pointer;
+    background-color:#FFF0DD;
+}
+button:after{
+    content:'';
+    position:absolute;
+    top:-20px; bottom:-20px; 
+    left:-20px; right:-20px; 
+}
+
+#btn-1{
+    top:5vh;
+    left:5vh;
+}
+
+#btn-2{
+    
+    left:6.5vh;
+    top:5vh;
+}
+
+#btn-3{
+    left:8vh;
+    top:5vh;
+}
+
+#btn-4{
+    top:7vh;
+    left:5vh;
+}
+
+#btn-5{
+    left:6.5vh;
+    top:7vh;
+}
+
+#btn-6{
+    left:8vh;
+    top:7vh;
+}
+
+#btn-7{
+    top:9vh;
+    left:5vh;
+}
+
+#btn-8{
+    top:9vh;
+    left:6.5vh;
+}
+
+#btn-9{
+   top:9vh;
+   left:8vh;
 }
