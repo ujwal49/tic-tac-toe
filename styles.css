@@ -79,13 +79,9 @@ button{
     position: relative;
     cursor:pointer;
     background-color:#FFF0DD;
+    padding: 2.5rem;
 }
-button:after{
-    content:'';
-    position:absolute;
-    top:-20px; bottom:-20px; 
-    left:-20px; right:-20px; 
-}
+
 
 #btn-1{
     top:5vh;
