@@ -7,7 +7,6 @@
 }
 body{
     background-color: #FFAC70;
-    margin-bottom: auto;
     width:100%;
 }
 
@@ -26,8 +25,8 @@ body{
 }
 
 .square{
-    width: 50vh;
-    height: 50vh;
+    width: 23rem;
+    height: 23rem;
     background-color: #FFF0DD;
     border-radius: 10vh;
     position: relative;
