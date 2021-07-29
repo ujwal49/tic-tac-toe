@@ -22,3 +22,13 @@ function change(id){
     }
 }
 
+function reset(){
+    for(var i=1;i<=9;i++){
+        var data = document.querySelector(`#btn-${i}`);
+        data.style.backgroundColor="#FFF0DD";
+        data.style.borderRadius="0%";
+        data.style.border="0px";
+        num = 1;
+    }
+}
+
