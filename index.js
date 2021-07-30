@@ -3,7 +3,7 @@ var x=[];
 var o=[];
 val='';
 //var check_winner = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
-var id_num=0,count=0,n,m,a,b,number;
+var id_num=0,count=0,n,m,a,b,number,p,q;
 var arr=[[0,0,0],[0,0,0],[0,0,0]];
 //having first player as O.
 
@@ -54,30 +54,55 @@ function assign(number){
 }
 
 function check(val){
+    count =0;
     for(a = 0;a<3;a++){
         for(b =0;b<3;b++){
             if(arr[a][b] == val){
                 count = count + 1;
             }
         }
-        if(count == 3) return true;
+        if(count == 3){
+            count = 0;
+            
+            return true;
+        } 
         count = 0;
     }
-    
+    count = 0;
     for(b = 0;b<3;b++){
         for(a =0;a<3;a++){
             if(arr[a][b] == val){
                 count = count + 1;
             }
         }
-        if(count == 3) return true;
-        count = 0;
+        if(count == 3) {
+             count = 0;
+             
+             return true;
+    }
+    count = 0;
     }
 
-    for(a =0;a<3;a++){
-        if(arr[a][a] == 'val'){
-            return true;
+    count = 0;
+    for(p=0;p<3;p++){
+     if(arr[p][p] == val){
+        count = count +1;
+    }}
+    if(count == 3){
+        count =0;
+        
+        return true;
+    }
+    count = 0;
+    for(q=0;q<3;q++){
+        if(arr[q][2-q] == val){
+            count = count +1;
         }
+    }
+    if(count == 3){
+        count = 0;
+        console.log('here');
+        return true;
     }
     count =0;
     return false;
@@ -112,7 +137,7 @@ function change(id){
 }
 
 function reset(){
-    if(num == 9){
+    if(num >= 9){
         for(var i=1;i<=9;i++){
             var data = document.querySelector(`#btn-${i}`);
             data.style.backgroundColor="#FFF0DD";
@@ -121,6 +146,8 @@ function reset(){
             num = 0;
             x=[];
             o=[];
+            arr=[[0,0,0],[0,0,0],[0,0,0]];
+            count =0;
         }
     }
     else{
