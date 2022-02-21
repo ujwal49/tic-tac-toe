@@ -1,1 +1,158 @@
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('26 13=0,24=[],25=[];65="";26 10,14,15,16,67,21,23,22=0,11=0,19=[[0,0,0],[0,0,0],[0,0,0]];28 31(12){1==12?(10=0,14=0):2==12?(10=0,14=1):3==12?(10=0,14=2):4==12?(10=1,14=0):5==12?(10=1,14=1):6==12?(10=1,14=2):7==12?(10=2,14=0):8==12?(10=2,14=1):9==12&&(10=2,14=2),19[10][14]=13%2==0?"25":"24"}28 33(10){17(11=0,15=0;15<3;15++){17(16=0;16<3;16++)19[15][16]==10&&(11+=1);20(3==11)27 11=0,!0;11=0}17(11=0,16=0;16<3;16++){17(15=0;15<3;15++)19[15][16]==10&&(11+=1);20(3==11)27 11=0,!0;11=0}17(11=0,21=0;21<3;21++)19[21][21]==10&&(11+=1);20(3==11)27 11=0,!0;17(11=0,23=0;23<3;23++)19[23][2-23]==10&&(11+=1);27 3==11?(11=0,51.47("45"),!0):(11=0,!1)}28 44(10){20(22=10[4],13%2==1&&13<=8)24.39(22),29.32("#"+10).18.34="#38",31(22),13+=1,33("24")&&(30("37 48 35 36 40"),13=9);43 20(13%2==0&&13<=8){25.39(22);26 12=29.32("#"+10);12.18.41="57 63 #38",12.18.42="50%",12.18.34="66",31(22),13+=1,33("25")&&(30("37 60 35 36 40"),13=9)}}28 62(){20(13>=9)17(26 10=1;10<=9;10++){26 12=29.32(`#64-${10}`);12.18.34="#61",12.18.42="0%",12.18.41="49",13=0,24=[],25=[],19=[[0,0,0],[0,0,0],[0,0,0]],11=0}43 30("59 54 53 52 58 55 46 56 :(")}',10,68,'||||||||||n|count|r|num|m|a|b|for|style|arr|if|p|id_num|q|x|o|var|return|function|document|alert|assign|querySelector|check|backgroundColor|is|th|Player|000000|push|winner|border|borderRadius|else|change|here|in|log|X|0px||console|wont|button|Again|while|game|5px|work|Play|O|FFF0DD|reset|solid|btn|val|FFFFFF|number'.split('|'),0,{}))
+var num = 0;
+var x=[];
+var o=[];
+val='';
+//var check_winner = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
+var id_num=0,count=0,n,m,a,b,number,p,q;
+var arr=[[0,0,0],[0,0,0],[0,0,0]];
+//having first player as O.
+
+function assign(number){
+
+    if(number == 1){
+        n = 0;
+        m=0;
+    }else if(number == 2){
+        n =0;
+        m = 1;
+    }
+    else if(number == 3){
+        n =0;
+        m = 2;
+    }
+    else if(number == 4){
+        n = 1;
+        m = 0;
+    }
+    else if(number == 5){
+        n = 1;
+        m=1;
+    }
+    else if(number == 6){
+        n = 1;
+        m = 2;
+    }
+    else if(number == 7){
+        n = 2;
+        m=0;
+    }
+    else if(number == 8){
+        n = 2;
+        m = 1;
+    }
+    else if(number == 9){
+        n = 2;
+        m =2;
+    }
+
+    if(num % 2 == 0){
+        arr[n][m]='o';
+    }
+    else{
+        arr[n][m]='x';
+    }
+}
+
+function check(val){
+    count =0;
+    for(a = 0;a<3;a++){
+        for(b =0;b<3;b++){
+            if(arr[a][b] == val){
+                count = count + 1;
+            }
+        }
+        if(count == 3){
+            count = 0;
+            
+            return true;
+        } 
+        count = 0;
+    }
+    count = 0;
+    for(b = 0;b<3;b++){
+        for(a =0;a<3;a++){
+            if(arr[a][b] == val){
+                count = count + 1;
+            }
+        }
+        if(count == 3) {
+             count = 0;
+             
+             return true;
+    }
+    count = 0;
+    }
+
+    count = 0;
+    for(p=0;p<3;p++){
+     if(arr[p][p] == val){
+        count = count +1;
+    }}
+    if(count == 3){
+        count =0;
+        
+        return true;
+    }
+    count = 0;
+    for(q=0;q<3;q++){
+        if(arr[q][2-q] == val){
+            count = count +1;
+        }
+    }
+    if(count == 3){
+        count = 0;
+        console.log('here');
+        return true;
+    }
+    count =0;
+    return false;
+}
+
+function change(id){
+    id_num = id[4];
+    if(num % 2 == 1 && num <= 8){
+        x.push(id_num);
+        var x_data = document.querySelector("#"+id);
+        x_data.style.backgroundColor="#000000";
+        assign(id_num);
+        num = num +1;
+        if(check('x')){
+            alert("Player X is th winner");
+            num = 9;
+        } 
+    }
+    else if(num % 2 == 0 && num <= 8){
+        o.push(id_num);
+        var o_data = document.querySelector("#"+id);
+        o_data.style.border="5px solid #000000";
+        o_data.style.borderRadius="50%";
+        o_data.style.backgroundColor="FFFFFF";
+        assign(id_num);
+        num = num +1;
+        if(check('o')){
+            alert("Player O is th winner");
+            num = 9;
+        } 
+    }
+}
+
+function reset(){
+    if(num >= 9){
+        for(var i=1;i<=9;i++){
+            var data = document.querySelector(`#btn-${i}`);
+            data.style.backgroundColor="#FFF0DD";
+            data.style.borderRadius="0%";
+            data.style.border="0px";
+            num = 0;
+            x=[];
+            o=[];
+            arr=[[0,0,0],[0,0,0],[0,0,0]];
+            count =0;
+        }
+    }
+    else{
+        alert("Play Again button wont work while in game :(");
+    }
+    
+    
+}

@@ -1,137 +1,41 @@
-
-*{
-    margin:0;
-    padding: 0;
-}
 body{
+    font-family: 'Inter', sans-serif;
     background-color: #FFAC70;
-    width:100%;
 }
 
 .container{
-    display:flex;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-#tic-tac-toe{
-    font-family: 'Roboto',sans-serif;
-    text-align: center;
-    position: relative;
-    top: 10vh;
+    justify-content: center;
 }
 
 .square{
-    width: 23rem;
-    height: 23rem;
-    background-color: #FFF0DD;
-    border-radius: 10vh;
-    position: relative;
-    align-content: center;
-    top: 18vh;
-    justify-content: center;
-}
-
-
-.horizantal-line{
-    height: 0.2rem;
-    background: #000000;
-    position:relative;
-    width: 40vh;
-    top:-10px;
-}
-
-#line-1{
-     top: 6vh;
-     left: 5vh;
-}
-
-#line-2{
-    top: 8vh;
-    left: 5vh;
-}
-
-.vertical-line{
-    height: 40vh;
-    width: 0.2rem;
-    background: #000000;
-    position:relative;
-}
-
-#line-3{
-    top:-32vh;
-    left:18vh;
-}
-
-#line-4{
-    top:-72vh;
-    left:32vh;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-top: 40px;
+    
 }
 
 .btn{
-    width: 12vh;
-    height:12vh;
-    border:none;
-    position: relative;
-    cursor:pointer;
-    background-color:#FFF0DD;
-    padding: 2.5rem;
-    outline: none;
+    height: 60px;
+    width: 60px;
+}
+
+#reset{
+    margin-top: 40px;
 }
 
 #reset-btn{
-    width: 12vh;
-    height: 6vh;
-    background-color: rgb(96, 96, 247);
-    position: relative;
-    top: 26vh;
-    border-radius: 4vh;
-    color: #FFFFFF;
+     background-color: rgb(96, 96, 247);
+     width: 90px;
+     height: 40px;
+     border-radius: 18px;
+     color: #FFFFFF;
+     font-weight: bold;
 }
 
-#btn-1{
-    top:5vh;
-    left:5vh;
-}
-
-#btn-2{
-    
-    left:6.5vh;
-    top:5vh;
-}
-
-#btn-3{
-    left:8vh;
-    top:5vh;
-}
-
-#btn-4{
-    top:7vh;
-    left:5vh;
-}
-
-#btn-5{
-    left:6.5vh;
-    top:7vh;
-}
-
-#btn-6{
-    left:8vh;
-    top:7vh;
-}
-
-#btn-7{
-    top:9vh;
-    left:5vh;
-}
-
-#btn-8{
-    top:9vh;
-    left:6.5vh;
-}
-
-#btn-9{
-   top:9vh;
-   left:8vh;
+#tic-tac-toe{
 }
